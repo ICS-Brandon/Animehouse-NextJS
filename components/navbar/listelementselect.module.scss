@@ -1,0 +1,43 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+/*
+  List Element
+
+  Used for sytling each list element in the Navbar Options div
+*/
+.listEle{
+  //CSS to decorate each element with a border and padding so long as it's not the last child
+  &:not(:last-child){
+    border-right: 1px solid $unselectedText;
+    padding-right: 1rem;
+  }
+
+  //If element is the first child add additional padding to the left side to offset entire list
+  &:not(:first-child){
+    padding-left: 1rem;
+  }
+}
+
+/*
+  List Element Text
+
+  Used to style the text of each list element
+*/
+.listEleText{
+  //Setting default values largely from global SCSS sheet
+  font-size: 1.3rem;
+  margin:0;
+  font-family: $navTextFamily;
+  font-size: $navFontSizeNormal;
+  font-weight: $navTextWeightNormal;
+  letter-spacing: $navTextSpacing;
+  text-transform: $navTextTransform;
+  //Defining behavior for when text is hovered
+  &:hover{
+    cursor:pointer;
+    color:white;
+    transition: $highlightTransition;
+  }
+  transition: $highlightTransition;
+}

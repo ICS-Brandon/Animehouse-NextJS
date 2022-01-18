@@ -1,0 +1,71 @@
+@import "../../styles/global.scss";
+
+/*
+  Search Wrapper
+
+  Sets padding for wrapper so menu icon isn't at the edge of the Navbar and ensure flex display
+*/
+.searchWrapper{
+  padding-right:1.5em;
+  display: flex;
+}
+
+/*
+  Search Icon
+
+  styling for Search Icon, mostly just placement and transition
+*/
+.searchIcon{
+  //Resize to desire scale and set margin
+  font-size: 1.3rem;
+  margin: auto 0.5rem auto 0;
+  //Defining hover behavior
+  &:hover{
+    cursor:pointer;
+    color:white;
+    transition: all 0.3s ease-in-out;
+  }
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+  Simple Search
+
+  CSS class for future use of search bar, currently default styling with no complex behavior
+*/
+.simpleSearch{
+  //Set margins and size temporarily
+  margin-right: 1.5rem;
+  height: 2.2rem;
+  width: 10rem;
+  //Set border and background color for style
+  border: 1px solid gray;
+  background-color: $bgColor;
+  border: $separatingBorder;
+  border-radius: 0.1rem;
+  &:focus{
+    outline: $separatingBorder;
+  }
+  //Placeholder text color with font styling
+  color: white;
+  font-size: 1.3rem;
+  text-indent: 0.2rem;
+}
+
+/*
+  Bars Icon
+
+  styling for Bars Icon, mostly just placement and transition
+*/
+.barsIcon{
+  //Resize to desire scale and set margin
+  font-size: 1.3rem;
+  margin: auto 0 auto 0;
+  //Defining hover behavior
+  &:hover{
+    cursor:pointer;
+    color:white;
+    transition: all 0.3s ease-in-out;
+  }
+  transition: all 0.3s ease-in-out;
+}

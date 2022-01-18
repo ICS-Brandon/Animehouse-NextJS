@@ -1,0 +1,156 @@
+@import "../../styles/global.scss";
+
+//Local variable for margin value
+$leftMargin: 3rem;
+
+/*
+  Sidebar Container
+
+  Used as the content wrapper for the entirety of the Sidebar
+*/
+.sidebarContainer{
+  //Setting position and size forcefully to the right edge of the page
+  position: absolute;
+  z-index: 10;
+  right: 0rem;
+  width: 29rem;
+  //Setting height to match the size of the window while allowing for overflow on the Y axis
+  height:100vh;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  //Setting colors and border
+  background-color: $bgColorDark;
+  border-left:$separatingBorder;
+
+  //Scrollbar class for custom scrollbar in Sidebar
+  &::-webkit-scrollbar{
+    width:10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bgColorDark;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bgColor;
+  }
+  //Transformatin and transition to mirror animation
+  transform: translateX(0rem);
+  transition: all 0.5s ease-out;
+}
+
+//Class used to show and animate the sidebar appearing
+.sidebarHide{
+  right:-29rem;
+
+  transform: translateX(29rem);
+  transition: all 0.5s ease-in-out;
+}
+
+//Small class to wrap all Sidebar elements as list, removes default style
+.sidebarList{
+  list-style:none;
+  padding:0;
+}
+
+//Small class to enforce flex display on all Sidebar elements
+.sidebarEle{
+  display: flex;
+}
+
+/*
+  Complex Search
+
+  Search bar used for the more detail search available in the sidebar
+*/
+.complexSearch{
+
+  //Set margins to match rest of items in sidebar
+  margin:2.5rem $leftMargin 0 $leftMargin;
+  //Some awful math/work to make the sidebar the same width as the UL
+  width: 22.313rem;
+  //Making font slightly larger than default
+  font-size: 1.2rem;
+  // Set padding so input is larger on all sides than text within
+  padding: 0.7rem 1rem 0.7rem 0rem;
+  //Set small indent for style purposes
+  text-indent: 0.5rem;
+  //Set background color, border, and default text color
+  background-color: $bgColor;
+  border: $separatingBorder;
+  border-radius: 0.1rem;
+  color: $brightText;
+  //Set font family
+  font-family: $navTextFamily;
+  //Chaning placeholder and focus values for style
+  &::placeholder{
+    color:$mediumText;
+  }
+  &:focus{
+    outline: $separatingBorder;
+  }
+}
+
+/*
+  Title Holder
+
+  Used to hold the title for the website in the sidebar
+  Currently using default values
+
+  TODO needs proper margins and spacing
+*/
+.titleHolder{
+  color:white;
+  padding-left: $leftMargin;
+}
+
+/*
+  Directory
+
+  Wrapper class used for the unordered list that contains all navigation for the sidebar
+*/
+.directory{
+  ul{
+    //Remove previous stylings and implement margin so list does not extend to the end of the sidebar
+    list-style-type:none;
+    padding:0;
+    margin-left: $leftMargin;
+  }
+}
+
+
+//Not sure what's going on with these two classes
+
+/*
+  Directory Ele (Directory Element)
+
+  Styling for each List Element in the unordered list used for navigation via the sidebar
+*/
+.directoryEle{
+  //Setting bottom margin for spacing between elements
+  margin-bottom:2rem;
+  //Setting bottom border for style and separation
+  border-bottom: $separatingBorderDotted;
+  //Squeezing in each list element so dotted lined doesn't extend to edge of sidebar
+  margin-right: 3rem;
+  //Setting text color
+  color:$unselectedText;
+  //Weird stuff here, text color doesn't change in the next class, but pointer works, so have to compromise and change color here
+  :hover{
+    color:$brightText;
+  }
+}
+
+/*
+  Text Hover
+
+  Used to change the color of the text to specified value with transition
+*/
+.textHover{
+  cursor:pointer;
+  color:$unselectedText;
+  width: 22.313rem;
+  :hover{
+    color:$brightText;
+    transition: $highlightTransition;
+  }
+  transition: $highlightTransition;
+}

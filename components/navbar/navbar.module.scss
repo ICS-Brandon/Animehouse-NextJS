@@ -1,0 +1,47 @@
+//Import global SCSS variables
+@import "../../styles/global.scss";
+
+/*
+  Conatiner
+
+  Class used for styling the highest level of the navigation bar
+*/
+.container{
+  //Set display to flex and justify content to space between to force search and menu icon to opposite side of bar
+  display: flex;
+  justify-content: space-between;
+  //
+  background-color: $bgColorDark;
+  border-bottom: $separatingBorder;
+  color:$unselectedText;
+  padding: 1rem 0 1rem 0;
+}
+
+//Wrapper used for Unordered List to display items horizontally
+.routingWrapper{
+  display: flex;
+}
+
+//Wraps all options and centers list vertically
+.optionsWrapper{
+  margin: $verticalCenter;
+}
+
+//Styling for title and fixes several small issues
+.titleAlign{
+  margin: $verticalCenter;
+  padding-left: 1rem;
+  font-family: $navTextFamily;
+  font-size: $navFontSizeTitle;
+  font-weight: 700;
+  letter-spacing: $navTextSpacing;
+  text-transform: $navTextTransform;
+  color:$brightText;
+}
+
+//Ensures vertical centering and horizontal layout, potentially redundant
+.listAlign{
+  display:flex;
+  list-style: none;
+  margin: $verticalCenter;
+}
