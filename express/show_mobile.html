@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Anime House</title>
+  <link rel="icon" href="https://lh3.googleusercontent.com/jpPxaP6OT3qLpp6NWp4QDYj9Iej8ROD-EhKrY8Q_9OclW9Yr1tN6FkbRnsWzU-wkULXedCt8E9mEmBw2zLhTe_93DSC9oljS8K5JyZC1V_fA_6MgbW854Au-kVeheBRs5yl1xXY04w=w2400" type = "image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/mobileMain.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class = "bgColor">
+
+<div id = "wrapper" class = "bgColor">
+
+  <div class = "bgColor" id = "mobileHeader">
+    <h1><a href="#" style = "color:#c1ccd4">Anime House</a></h1>
+    <nav class="main bgColorDark">
+      <ul>
+        <!-- Menu Icon -->
+        <li class="menu" id = "mobileMenu">
+          <a class="fa-bars" href="#menu">Menu</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <section style="background-color:#121212" id="menu">
+
+    <!-- Search Bar-->
+      <section class = "bgColorDark">
+        <form class="search" method="get" action="search_mobile.html">
+          <input id = "test" type="text" name="Query" placeholder="Search"/>
+        </form>
+      </section>
+
+    <!-- Links -->
+    <!-- TODO SORT OUT WHAT'S GOING HERE -->
+    <section class = "bgColorDark">
+      <ul class="links">
+        <li>
+          <a href="mobile.html">
+            <h3>Home</h3>
+          </a>
+        </li>
+        <li>
+          <a href="show_mobile.html?display=Anime">
+            <h3>Anime</h3>
+          </a>
+        </li>
+        <li>
+          <a href="show_mobile.html?display=Manga">
+            <h3>Manga</h3>
+          </a>
+        </li>
+        <li>
+          <a href="show_mobile.html?display=Light_Novel">
+            <h3>Light Novel</h3>
+          </a>
+        </li>
+        <li>
+          <a href="faq_mobile.html">
+            <h3>Help</h3>
+          </a>
+        </li>
+        <li style = "text-align:center">
+          <a href="https://twitter.com/Animehouse_Ca?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Animehouse_Ca</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <iframe class = "discord" src="https://discord.com/widget?id=831001494265921536&theme=dark" width="100%" height="400em" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Actions -->
+      <section class = "bgColorDark">
+        <ul class="actions vertical bgColorDark">
+          <li class = "bgColorDark"><a href="#" class="button big fit">Log In</a></li>
+        </ul>
+      </section>
+
+  </section>
+
+    <section id="intro" class ="testing">
+      <a href="#" class="logo"><img src="https://lh3.googleusercontent.com/9lR_9KbOPe9Fs3UJLV_EaTreqZVhJoL3ef2MzvnF9p0DEuLi6eJVtiu6MPgBdfAXrioGMe81svYwD_ljUdO64u4DoaBREzUl6i3Uvn_XelDbOvfJ8TW_Dz0-62G9Z_q5w3h5Ze9nsA=w2400" alt="images/logo.jpg" /></a>
+      <header>
+        <h3 class ="animehouseTitle" style ="color:#c1ccd4">Anime House</h3>
+      </header>
+    </section>
+
+    <div id = "searchBar">
+      <form id = "searchForm">
+        <input id = "showMobileSearchBar" type = "text" placeholder="Search By">
+      </form>
+    </div>
+
+    <div class="js-scrollable" ontouchstart = "showGif()">
+      <div class = "shadowBackground">
+        <img class = "scrollHint" src = "https://lh3.googleusercontent.com/JgM7xf1VoHJW-Zrs7-Acf3Rf-TOfOZSYPQaQ1cjiLtOATk8JHlkI6x8zP8gEvIZORLATXpJDK5oQmqTfyv8OFGNgR3Apo1Di6isz_cZsyQXCQYDbBJxk6TVg1LQI1lDCG2GRVE9wNw=w2400">
+      </div>
+      <div id = "test" class = "xScroll">
+        <div>
+          <img class = "staticHint" src = "https://lh3.googleusercontent.com/tVDgqay5dMIDc-ia2ho0cl2nBXeYl1cNI-putoojJ95xi5wWR-ostzDs7uVa4WjYPFgxdWkABT-OG2zMuTK4YaJ6iK5b4JFktkeCgbLzA1O-Ys_w__fCmIjNwZIxaPxI1kqDW7hpng=w2400">
+        </div>
+        <div class = "scrollButton iconImage">
+          <img src = "https://lh3.googleusercontent.com/4rqwGHGd_S-BRBH-HyMmnvKQJkdwLc_FVUvXGywlonB8C2fBHH8jIof6biLPtgXpzEBh-LdT_A6FAMfYPhQiRRoxegUXpj5-NMZc_xF0q4UTUgmKWakP0q-emX66eiaAfR2baggSCA=w2400">
+        </div>
+        <div class = "scrollButton" id = "filterAction">
+          <input name = "Action" type = "checkbox"/><p class = "typePadding">Action</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterAdventure">
+          <input name = "Adventure" type = "checkbox"/><p class = "typePadding">Adventure</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterComedy">
+          <input name = "Comedy" type = "checkbox"/><p class = "typePadding">Comedy</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterDrama">
+          <input type = "checkbox"><p class = "typePadding">Drama</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterFantasy">
+          <input name = "Fantasy" type = "checkbox"/><p class = "typePadding">Fantasy</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterGeneral">
+          <input name = "General" type = "checkbox"><p class = "typePadding">General</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterHorror">
+          <input name = "Horror" type = "checkbox"><p class = "typePadding">Horror</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterMystery">
+          <input name = "Mystery" type = "checkbox"><p class = "typePadding">Mystery</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterSci-Fi">
+          <input name = "Sci-Fi" type = "checkbox"><p class = "typePadding">Sci-Fi</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterSliceofLife">
+          <input name = "SliceofLife" type = "checkbox"><p class = "typePadding">Slice of Life</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterSupernatural">
+          <input name = "Supernatural" type = "checkbox"><p class = "typePadding">Supernatural</p></input>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-scrollable">
+      <div id = "typeFilter" class = "xScroll">
+        <div>
+          <img class = "staticHint" src = "https://lh3.googleusercontent.com/tVDgqay5dMIDc-ia2ho0cl2nBXeYl1cNI-putoojJ95xi5wWR-ostzDs7uVa4WjYPFgxdWkABT-OG2zMuTK4YaJ6iK5b4JFktkeCgbLzA1O-Ys_w__fCmIjNwZIxaPxI1kqDW7hpng=w2400">
+        </div>
+        <div class = "scrollButton iconImage">
+          <img src = "https://lh3.googleusercontent.com/4rqwGHGd_S-BRBH-HyMmnvKQJkdwLc_FVUvXGywlonB8C2fBHH8jIof6biLPtgXpzEBh-LdT_A6FAMfYPhQiRRoxegUXpj5-NMZc_xF0q4UTUgmKWakP0q-emX66eiaAfR2baggSCA=w2400">
+        </div>
+        <div class = "scrollButton" id = "filterOne">
+          <input name = "One" type = "checkbox"/><p class = "typePadding">Weekly</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterTwo">
+          <input name = "Two" type = "checkbox"/><p class = "typePadding">Seasonal</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterThree">
+          <input name = "Three" type = "checkbox"/><p class = "typePadding">General</p></input>
+        </div>
+        <div class = "scrollButton" id = "filterFour">
+          <input name = "Four" type = "checkbox"><p class = "typePadding">Other</p></input>
+        </div>
+      </div>
+    </div>
+
+    <div class = "relTest">
+      <div id = "sortSelectors" class = "sortSelectorParent">
+        <!--
+        <div>
+          <img class = "staticHint" src = "https://lh3.googleusercontent.com/tVDgqay5dMIDc-ia2ho0cl2nBXeYl1cNI-putoojJ95xi5wWR-ostzDs7uVa4WjYPFgxdWkABT-OG2zMuTK4YaJ6iK5b4JFktkeCgbLzA1O-Ys_w__fCmIjNwZIxaPxI1kqDW7hpng=w2400">
+        </div> -->
+        <!--
+        <div style = "display:inline-block">
+          <img class = "staticPosFix" src = "https://lh3.googleusercontent.com/pyUjVYe2Izt2gWvhMwFlE6R1ps_93BsNhLu9qNMWtljZ6m6qK2Nn3OuxCMlmVpfSTU09YMHCkjyb28YsF4SH-4m69ruQJtTVrXUl4hYCMSYKNDKJ3-CHqPhzsnNAJWNnGpuQugnW5A=w2400">
+        </div>-->
+        <div class = "wrapSpaceAround">
+
+          <div id = "genre" class = "positionFix">
+            <div class = "removePadding typePadding properFont">Genre</div>
+            <img class = "maxSize" src = "https://lh3.googleusercontent.com/pyUjVYe2Izt2gWvhMwFlE6R1ps_93BsNhLu9qNMWtljZ6m6qK2Nn3OuxCMlmVpfSTU09YMHCkjyb28YsF4SH-4m69ruQJtTVrXUl4hYCMSYKNDKJ3-CHqPhzsnNAJWNnGpuQugnW5A=w2400">
+            <img class = "divider" src = "https://lh3.googleusercontent.com/nOWOEP_8pyuwEz8SC3ZYAxBspXZK9kAitZ8PH9z0OQNCul1eK5bmEYJ1Se19umB2VMCHalEtT1CU4ReTwAAR6OTH_b5KvMOEqwtYxcg5K7S5mPS5-rkPi6qORt9ncLkkizFPBBOO3w=w2400">
+          </div>
+
+          <div id = "date" class = "positionFix heightFix">
+            <div class = "removePadding typePadding properFont">Date</div>
+            <img class = "maxSize" src = "https://lh3.googleusercontent.com/pyUjVYe2Izt2gWvhMwFlE6R1ps_93BsNhLu9qNMWtljZ6m6qK2Nn3OuxCMlmVpfSTU09YMHCkjyb28YsF4SH-4m69ruQJtTVrXUl4hYCMSYKNDKJ3-CHqPhzsnNAJWNnGpuQugnW5A=w2400">
+            <img class = "divider" src = "https://lh3.googleusercontent.com/nOWOEP_8pyuwEz8SC3ZYAxBspXZK9kAitZ8PH9z0OQNCul1eK5bmEYJ1Se19umB2VMCHalEtT1CU4ReTwAAR6OTH_b5KvMOEqwtYxcg5K7S5mPS5-rkPi6qORt9ncLkkizFPBBOO3w=w2400">
+          </div>
+
+          <div id = "title" class = "positionFix">
+            <div class = "removePadding typePadding properFont">Title</div>
+            <img class = "maxSize" src = "https://lh3.googleusercontent.com/pyUjVYe2Izt2gWvhMwFlE6R1ps_93BsNhLu9qNMWtljZ6m6qK2Nn3OuxCMlmVpfSTU09YMHCkjyb28YsF4SH-4m69ruQJtTVrXUl4hYCMSYKNDKJ3-CHqPhzsnNAJWNnGpuQugnW5A=w2400">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id = "showParent" class = sortParent>
+
+    </div>
+
+
+
+
+</div>
+
+<script src = "assets/js/deny.js"></script>
+<script src="assets/js/mobileSort.js"></script>
+<script src="assets/js/show_mobile.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/sort.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){
+  checkCookies();
+  addButtonListeners();
+  loadItemsMobile();
+  if(!navigator.userAgent.toLowerCase().match(/mobile/i)) {
+    let index = window.location.href.indexOf("?")
+    let options = "";
+    if(index > 0){
+      options = window.location.href.substring(index,window.location.href.length);
+    }
+     checkMobile("show.html"+options);
+   }
+},false);</script>
+</body>
+</html>

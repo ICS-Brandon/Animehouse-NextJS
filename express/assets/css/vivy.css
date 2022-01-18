@@ -1,0 +1,276 @@
+a{
+  text-decoration: none !important;
+  decoration: none !important;
+}
+
+li:hover{
+  cursor: default;
+}
+
+.vivSidebar{
+  position: sticky;
+  position: -webkit-sticky;
+  min-width: 20em;
+  width: 20em;
+  margin-right: 10em;
+}
+
+.vivyLogo{
+  display: block !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.introBlurb{
+  padding-bottom:1em;
+  padding-top: 2em;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  line-height: 1.4;
+}
+
+.volumeOptions{
+  display: flex;
+  justify-content: space-between;
+  max-width: 64.8125em;
+}
+
+.volumeOptions>h2{
+  font-size:1.4em;
+  padding-bottom: 2em;
+}
+
+.volumeOptions>h6{
+  padding-top:4.5em;
+  text-decoration: underline;
+}
+
+.volumeOptions>h6:hover{
+  cursor: pointer;
+}
+
+.translationChapter{
+  display:flex;
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  max-width: 64.8125em;
+  height: 13.70em;
+  background-color: #121212;
+  margin-bottom: 5em;
+}
+
+.imageCont{
+  border-right: solid 1px rgba(160, 160, 160, 0.3);
+  min-width: 18.3em;
+  min-height: 13.57em;
+  width: 18.3em !important;
+}
+
+.vivyImage{
+  max-width:100%;
+  max-height:100%;
+}
+
+.vivyImage:hover{
+  cursor:pointer;
+}
+
+.contentCont{
+  overflow-y:scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.contentCont::-webkit-scrollbar{
+  display: none;
+}
+
+.titleAndDate{
+  display: flex;
+  max-width: 46.42em;
+  max-height:3.33em;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+.translationTitle{
+  padding-top:0.6em;
+  padding-bottom: 2.37em;
+  padding-right:3em;
+  margin-left:0.8em;
+  max-width:29.64375em;
+  border-right: solid 1px rgba(160, 160, 160, 0.3);
+  font-size: 1.1em;
+}
+
+.translationTitle:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.translationDate{
+  padding-top:0.5em;
+  padding-bottom: 1em;
+  margin-left: 1em;
+  font-size: 1.1em;
+  min-width:8em;
+}
+
+.translationPara{
+  max-width: 46.42em;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+}
+
+.sidebarTitle{
+  padding-bottom: 0.4em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  padding-top: 1em;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+.subItems{
+  list-style-type: none;
+  decoration:none;
+}
+
+.subItems > * {
+  text-decoration: none;
+  decoration:none;
+}
+
+.stickyClass{
+  position:-webkit-sticky;
+  position:sticky;
+  top:8em;
+}
+
+@media screen and (max-height: 1080px){
+  .stickyClass{
+    position: relative !important;
+  }
+}
+
+@media screen and (max-width: 1795px){
+  .titleAndDate{
+    max-height:4.33em;
+  }
+  .translationTitle{
+    padding-bottom:3.3em;
+  }
+}
+
+@media screen and (max-width:1310px){
+  .titleAndDate{
+    max-height: 6em;
+  }
+  .translationTitle{
+    padding-bottom: 4.8em !important;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  #miniPostContainer{
+    display: none;
+  }
+}
+
+@media screen and ( max-width: 750px){
+  .vivyHide{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 785px){
+  .titleAndDate{
+    max-height: 7.5em;
+  }
+  .translationTitle{
+    padding-bottom: 6.2em !important;
+  }
+}
+
+.chapterPost{
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  margin-bottom: 3em;
+  display:relative;
+}
+
+.vivyMeta{
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+.chapterAndTitle{
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 1em;
+  width: 55em;
+}
+
+.chapterAndTitle>h1{
+  font-size:1.4em;
+}
+
+.vivyDateAndAuthor{
+  width: 13em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+  border-left: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+.vivyDateAndAuthor>h4{
+  margin-bottom:0.8em;
+}
+
+.authorLink{
+  font-size:0.6em;
+  letter-spacing: 0.2em;
+}
+
+.authorLink:hover{
+  text-decoration: underline;
+}
+
+.downloadLink{
+  font-size: 0.5em;
+  margin-left
+  letter-spacing: 0.18em;
+}
+
+.downloadLink:hover{
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+.postWriting{
+  white-space: pre-wrap;
+  padding-left: 1em;
+  padding-right:1em;
+  margin-top: 2em;
+}
+
+.chapterButtons{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.vivyChapterMobile{
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  margin-bottom: 1.5em;
+}
+
+.mobileImageHeader>img{
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.testingHover:hover{
+  text-decoration: none;
+}

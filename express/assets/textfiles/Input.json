@@ -1,0 +1,6 @@
+{
+  "articles":[
+    {"title":"About Me","header" : "An introductory post about who I am","date":"March 15, 2021","file":"body1.txt"},
+    {"title":"Ultricies sed magna euismod enim vitae gravida","header" : "Lorem ipsum dolor amet nullam consequat etiam feugiat","date":"October 25, 2015","file":"body2.txt"}
+  ]
+}

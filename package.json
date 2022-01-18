@@ -1,0 +1,16 @@
+{
+    "name": "node-ex-website",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "express-force-ssl": "^0.3.2",
+        "pg": "^8.5.1",
+        "react-animated-css": "^1.2.1"
+    }
+}

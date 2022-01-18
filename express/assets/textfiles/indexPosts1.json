@@ -1,0 +1,7 @@
+{
+  "posts":[
+    {"id" : "20220318", "genre":"Review", "link":"aboutMe.html", "mobilelink": "aboutMeMobile.html", "title" : "Title One", "blurb" : "Test Blurb", "date" : "March 20, 2021", "featImage" : "images/decorativeImageOne.png", "paragraph" : "This is a test paragaph to see if I know what I'm doing lmao."},
+    {"id" : "20210318", "genre":"RomCom", "link":"aboutMe.html", "mobilelink": "aboutMeMobile.html", "title" : "Title Two", "blurb" : "Test Blurb Two", "date" : "March 20, 2021", "featImage" : "images/aboutMe.png", "paragraph" : "This is a test paragaph to see if I know what I'm doing lmao."},
+    {"id" : "20230318", "genre":"Action", "link":"aboutMe.html", "mobilelink": "aboutMeMobile.html", "title" : "About Me", "blurb" : "An Introductory Post About Who I am", "date" : "March 15, 2021", "featImage" : "images/aboutMe.png", "paragraph" : "I'm currently a young university student living in Canada who's interest has been greatly peaked by Anime. I always watched stuff like Naruto and Dragon Ball Z growing up (even had a few nightmares caused by Neon Genesis Evangelion), but as I got older I drifted from the medium until I reconnected with it in highschool and when it flourished in university."}
+  ]
+}

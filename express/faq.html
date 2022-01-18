@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Anime House</title>
+		<link rel="icon" href="https://lh3.googleusercontent.com/jpPxaP6OT3qLpp6NWp4QDYj9Iej8ROD-EhKrY8Q_9OclW9Yr1tN6FkbRnsWzU-wkULXedCt8E9mEmBw2zLhTe_93DSC9oljS8K5JyZC1V_fA_6MgbW854Au-kVeheBRs5yl1xXY04w=w2400" type = "image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/faq.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class = "bgColor" id = "onLoad">
+		<a id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
+		<div class = "testDiv bgColorDark" id = "mainSearchResults">
+			<div class = "searchMargin" id = "searchParent">
+			</div>
+		</div>
+
+		<!-- Wrapper -->
+			<div class = "bgColor" id="wrapper">
+				<!-- Header -->
+					<header class = "bgColorDark" id="header">
+						<h1><a href="#" style="color:#c1ccd4">Anime House</a></h1>
+						<!-- Main Page Links -->
+						<nav class="bgColorDark links">
+							<ul class = "bgColorDark hoverThing">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="show.html?display=Anime">Anime</a></li>
+								<li><a href="show.html?display=Manga">Manga</a></li>
+								<li><a href="show.html?display=Light_Novel">Light Novel</a></li>
+								<li><a href="faq.html">Help</a></li>
+							</ul>
+						</nav>
+						<nav class="main bgColorDark">
+							<ul>
+								<!-- Search Icon -->
+								<li class="search" id = "enableSearchView">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="newSearch" method="get" action="#" onsubmit = "submitForm(event)">
+										<input id = "textFocus" type="text" name="query" placeholder="Quick Find"/>
+									</form>
+								</li>
+								<!-- Menu Icon -->
+								<li class="menu" id = "enableLargeSearchView">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Pop-out Menu From Main Bar -->
+					<section style="background-color:#121212" id="menu">
+
+						<!-- Search Bar-->
+							<section class = "bgColorDark">
+								<div id = "newSearch">
+									<input id = "textFocus" type="text" name="query" placeholder="Quick Find" style = "margin-top:0.4em;"/>
+								</div>
+							</section>
+
+							<section id="searchTitle">
+								<a href="#" class="logo"><img src="https://lh3.googleusercontent.com/9lR_9KbOPe9Fs3UJLV_EaTreqZVhJoL3ef2MzvnF9p0DEuLi6eJVtiu6MPgBdfAXrioGMe81svYwD_ljUdO64u4DoaBREzUl6i3Uvn_XelDbOvfJ8TW_Dz0-62G9Z_q5w3h5Ze9nsA=w2400" alt="images/logo.jpg" /></a>
+								<header>
+									<h3 class ="animehouseTitle" style ="color:#c1ccd4">Anime House</h3>
+								</header>
+							</section>
+
+
+							<section class = "invisible" id = "sectionWrapper">
+								<div id = "largeSearchParent" style = "text-align: center">
+								</div>
+							</section>
+
+							<!-- Actions -->
+		            <section class = "bgColorDark" style = "text-align: center">
+		              <ul class="actions vertical bgColorDark">
+		                <li class = "bgColorDark"><a href="#" class="button big menuButton">Coming Soon</a></li>
+		              </ul>
+		            </section>
+
+
+
+
+
+						<!-- Links -->
+							<section class = "bgColorDark">
+								<ul class="links">
+									<li>
+										<a href="index.html">
+											<h3>Home</h3>
+										</a>
+									</li>
+									<li>
+					          <a href="show.html?display=Anime">
+					            <h3>Anime</h3>
+					          </a>
+					        </li>
+					        <li>
+					          <a href="show.html?display=Manga">
+					            <h3>Manga</h3>
+					          </a>
+					        </li>
+					        <li>
+					          <a href="show.html?display=Light_Novel">
+					            <h3>Light Novel</h3>
+					          </a>
+					        </li>
+									<li>
+										<a href="faq.html">
+											<h3>Help</h3>
+										</a>
+									</li>
+									<li>
+					          <a href="https://twitter.com/Animehouse_Ca?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Animehouse_Ca</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					        </li>
+									<li>
+					          <iframe class = "discord" src="https://discord.com/widget?id=831001494265921536&theme=dark" width="100%" height="400em" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+					        </li>
+								</ul>
+							</section>
+
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Pagination -->
+							<ul class="actions pagination" style = "padding-left: 5%">
+
+                <div class = "faq">
+                  <div class = "question brightText">
+                    <h3>"Why Was This Website Created?"</h3>
+                  </div>
+                  <hr class = "solid maxWidth">
+                  <div class = "content mediumText">
+                    <p>
+                    To make a long story short it's cause I have literally nothing better to do than build stuff, so I did.
+                    In actuality though, it was becuase I felt my university education in computer science was severely lacking
+                    for what is to be expected and assumed from a fresh graduate. I could have gone in dark into my career but
+                    I didn't want to be screwed from the start, so I began a search for projects to undertake. Website development has
+                    been my largest known weakpoint for a while now so I decided to get nice and personal with them to learn better. I also
+                    <i>really</i> like anime and always have so much to talk about with each episode so it made sense to combine the two so I
+                    don't get bored and to make sure I'm putting forward a solid effort.
+                  </p>
+                  </div>
+                </div>
+
+                <div class = "faq">
+                  <div class = "question brightText">
+                    <h3>"Who's This Website For?"</h3>
+                  </div>
+                  <hr class = "solid maxWidth">
+                  <div class = "content mediumText">
+                    <p>
+                    It's for anyone and everyone that enjoys anime and likes to hear about someone elses thoughts on it. The end goal is to create
+                    something that people are interested in visiting to get opinions, gush about an episode, and those sorts of things. The content
+                    that will be covered on here can definitely be explicit at times (violence, gore, etc.), so be warned for those things. There will
+                    not be, however, any explicitly sexual content covered on here. It might not be hentai but there are quite a few anime that definitely
+                    cross that line.
+                  </p>
+                  </div>
+                </div>
+
+                <div class = "faq">
+                  <div class = "question brightText">
+                    <h3>"Do You Use Social Media?"</h3>
+                  </div>
+                  <hr class = "solid maxWidth">
+                  <div class = "content mediumText">
+                    <p>
+                    Yes, I do. At the moment it consists of 2 (or 3, depending on how you define it), social media accounts. The primary account used being Twitter,
+                    it's perfect for posting small thoughts and blurbs, sharing images, and interacting with other people, if you haven't already clicked on one of the
+                    Twitter icons across the website heres a link to it: <a href = "https://twitter.com/Animehouse_Ca" target="_blank">twitter.com/Animehouse_Ca</a>. I
+                    also use Instagram though it's mostly for image posts from anime so it's not as consistent. You can find it here: <a href="https://www.instagram.com/animehouse_ca/" target="_blank">instagram.com/animehouse_ca</a>.
+                    The last "social media" used is Discord. I have a Discord server dedicated to users interacting with the website or any of the social media accounts.
+                    It's definitely a more relaxed air with broader topics compared to here or Twitter. If you haven't noticed the large Discord embed in the sidebar by now
+                    and want to join the server, <a href="https://discord.gg/3ATNWRVxqb" target="_blank">click this highlighted text to join the server</a>. If you want to reach
+										me directly the easiest way is to email me at "piroinquiry@gmail.com".
+                  </p>
+                  </div>
+                </div>
+
+								<div class = "faq">
+                  <div class = "question brightText">
+                    <h3>"What's Your Favorite Anime?"</h3>
+                  </div>
+                  <hr class = "solid maxWidth">
+                  <div class = "content mediumText">
+                    <p>
+                    There is literally zero correct answer to that question. Hell, I don't even have an answer to begin with. That's part of the reason that I'm doing this,
+										I don't have a <i>singular favorite anime</i>, there's just too many with varying types, animation, voice actors, art, stories. There's just too much of everything
+										to be able to narrow it down to a single pick. Plus, I feel, when you find that quintessential show the fun is over. Once you've found the best you're admitting that
+										nothing else can top it, nothing else could change your mind. So as long as I'm still interested in anime I definitely won't have a singular favorite anime, I'll have one hell
+										of a watch list to recommend though.
+                  </p>
+                  </div>
+                </div>
+
+
+							</ul>
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Introduction Tab -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="https://lh3.googleusercontent.com/9lR_9KbOPe9Fs3UJLV_EaTreqZVhJoL3ef2MzvnF9p0DEuLi6eJVtiu6MPgBdfAXrioGMe81svYwD_ljUdO64u4DoaBREzUl6i3Uvn_XelDbOvfJ8TW_Dz0-62G9Z_q5w3h5Ze9nsA=w2400" alt="images/logo.jpg" /></a>
+								<header>
+									<h3 class ="animehouseTitle" style ="color:#c1ccd4">Anime House</h3>
+									<p style = "color: #969696">A place where I post my thoughts and reviews of various Anime</p>
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section id = "miniPostContainer">
+								<div class="mini-posts">
+									<h2 class="brightText">Featured Reviews</h2>
+									<!-- Mini Post -->
+										<article class="mini-post bgColorDark miniTransition">
+											<header>
+												<h3><a href="#" class="brightText">Vitae sed condimentum</a></h3>
+												<time class="published mediumText" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="" alt="" /></a>
+											</header>
+											<a href="#" class = "image"><img src="" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post bgColorDark miniTransition">
+											<header>
+												<h3><a href="#" class="brightText">Rutrum neque accumsan</a></h3>
+												<time class="published mediumText" datetime="2015-10-19">October 19, 2015</time>
+												<a href="#" class="author"><img src="" alt="" /></a>
+											</header>
+											<a href="#" class = "image"><img src="" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post bgColorDark miniTransition">
+											<header>
+												<h3><a href="#" class="brightText">Odio congue mattis</a></h3>
+												<time class="published mediumText" datetime="2015-10-18">October 18, 2015</time>
+												<a href="#" class="author"><img src="" alt="" /></a>
+											</header>
+											<a href="#" class = "image"><img src="" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post bgColorDark miniTransition">
+											<header>
+												<h3><a href="#" class="brightText">Enim nisl veroeros</a></h3>
+												<time class="published mediumText" datetime="2015-10-17">October 17, 2015</time>
+												<a href="#" class="author"><img src="" alt="" /></a>
+											</header>
+											<a href="#" class = "image"><img src="" alt="" /></a>
+										</article>
+
+								</div>
+							</section>
+
+						<!-- Micro Post List, Swap out for Weekly anime star ratings? -->
+							<section>
+								<h3 class ="currentFavorites" style ="color:#c1ccd4">Current Favorites</h3>
+								<ul class="posts">
+									<li>
+										<article>
+											<header>
+												<h3><a href="#" class="brightText">Convallis maximus nisl mattis nunc id lorem</a></h3>
+												<time class="published mediumText" datetime="2015-10-15">October 15, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3><a href="#" class="brightText">Convallis maximus nisl mattis nunc id lorem</a></h3>
+												<time class="published mediumText" datetime="2015-10-15">October 15, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3><a href="#" class="brightText">Euismod amet placerat vivamus porttitor</a></h3>
+												<time class="published mediumText" datetime="2015-10-10">October 10, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3><a href="#" class="brightText">Magna enim accumsan tortor cursus ultricies</a></h3>
+												<time class="published mediumText" datetime="2015-10-08">October 8, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3><a href="#" class="brightText">Congue ullam corper lorem ipsum dolor</a></h3>
+												<time class="published mediumText" datetime="2015-10-06">October 7, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="" alt="" /></a>
+										</article>
+									</li>
+								</ul>
+							</section>
+
+							<section id = "miniPostContainer">
+								<div class="mini-posts">
+									<h2 class="brightText zeroSpacingBottom">Want To Help Test The Website?</h2>
+									<h5 class = "brightText widthFix">Join our Discord server and become a tester!</h5>
+									<iframe class = "discord" src="https://discord.com/widget?id=831001494265921536&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+								</div>
+							</section>
+
+						<!-- About -->
+							<section class="blurb">
+								<h2 style ="color:#c1ccd4">About Me</h2>
+								<p style = "color: #969696">I'm a university student with no shortage of hobbies, anime being one of them. When looking for a project I thought, "What better an idea than one that combines Anime with programming", so here we are.</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Learn More</a></li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://twitter.com/Animehouse_Ca" target="_blank" class="fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://discord.gg/3ATNWRVxqb" target ="_blank"><i class = "fa fa-discord-alt"></i></a></li>
+									<li><a href="https://www.instagram.com/animehouse_ca/" target="_blank" class="fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="mailto: piroinquiry@gmail.com" class="fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+
+					</section>
+
+			</div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/scrollBack.js"></script>
+			<script src="assets/js/mainSearch.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/sort.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/importText.js"></script>
+			<script src="assets/js/featuredPosts.js"></script>
+			<script src="assets/js/favouriteSeries.js"></script>
+			<script>document.addEventListener('DOMContentLoaded',function(){
+				fetchSeries();
+				fetchPosts();
+				if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
+					checkMobile("faq_mobile.html");
+				 }
+			},false);</script>
+
+	</body>
+</html>
