@@ -7,7 +7,9 @@
 */
 .searchWrapper{
   padding-right:1.5em;
+  height:4.5rem;
   display: flex;
+  font-family: $navTextFamily;
 }
 
 /*
@@ -18,7 +20,7 @@
 .searchIcon{
   //Resize to desire scale and set margin
   font-size: 1.3rem;
-  margin: auto 0.5rem auto 0;
+  margin: auto 0 auto 0;
   //Defining hover behavior
   &:hover{
     cursor:pointer;
@@ -28,6 +30,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.searchSpace{
+  margin-right: 1rem;
+}
+
 /*
   Simple Search
 
@@ -35,9 +41,9 @@
 */
 .simpleSearch{
   //Set margins and size temporarily
-  margin-right: 1.5rem;
   height: 2.2rem;
-  width: 10rem;
+  margin: $verticalCenter;
+  width: 15rem;
   //Set border and background color for style
   border: 1px solid gray;
   background-color: $bgColor;
@@ -50,6 +56,64 @@
   color: white;
   font-size: 1.3rem;
   text-indent: 0.2rem;
+  transition: all 0.5s ease-out;
+}
+
+/*
+
+  Search Hide
+
+  CSS class used for hiding and unhiding the search bar
+*/
+.searchHide{
+  width:0rem;
+  margin-right: 0rem;
+  border:none;
+  background-color:$bgColorDark;
+  transition: all 0.5s ease-out;
+}
+
+//Simple class to add to container with single rulefor spacing purposes
+.separator{
+  display: flex;
+  margin-right:1.5em;
+  border-left:$separatingBorder;
+  border-right:$separatingBorder;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/*
+  Dropdown
+
+  Governs the default styles of the dropdown menu, missing height and borders that are added through transition
+*/
+.dropDown{
+  position: absolute;
+  z-index: 10;
+  top:4.1rem;
+  right: 4.13rem;
+  width:20.4rem;
+  height:0rem;
+  overflow-y: scroll;
+  background-color:$bgColorDark;
+  transition: all 0.7s ease-out;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+/*
+  Dropdown Visible
+
+  Used to add style to dropdown menu when visible
+*/
+.dropDownVisible{
+  height:18rem;
+  border-bottom:$separatingBorder;
+  border-left:$separatingBorder;
+  border-right:$separatingBorder;
+  transition: all 0.7s ease-out;
 }
 
 /*
@@ -68,4 +132,32 @@
     transition: all 0.3s ease-in-out;
   }
   transition: all 0.3s ease-in-out;
+}
+
+/*
+  Simple Results
+
+  Class used for styling of all search results returned to search bar
+*/
+.simpleResults{
+  list-style: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  //Adds padding and margin to all but last child element
+  li:not(:last-child){
+    margin-bottom: 1rem;
+    padding-bottom: 0.2rem;
+  }
+  //Adds bottom border and hover behavior to all children
+  li{
+    border-bottom: $separatingBorderDotted;
+    &:hover{
+      border-bottom: none;
+      cursor: pointer;
+    }
+    //Adjusting text size
+    a{
+      font-size: 1.1rem;
+    }
+  }
 }

@@ -14,7 +14,7 @@
   background-color: $bgColorDark;
   border-bottom: $separatingBorder;
   color:$unselectedText;
-  padding: 1rem 0 1rem 0;
+  height:4.5rem;
 }
 
 //Wrapper used for Unordered List to display items horizontally
@@ -24,7 +24,7 @@
 
 //Wraps all options and centers list vertically
 .optionsWrapper{
-  margin: $verticalCenter;
+  height: 4.5rem;
 }
 
 //Styling for title and fixes several small issues

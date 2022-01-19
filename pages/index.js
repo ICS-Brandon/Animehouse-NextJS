@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import sidebarStyles from '../components/sidebar/sidebar.module.scss'
+import searchStyles from '../components/navbar/searchoptions.module.scss'
 import indexStyles from "./index.module.scss"
 
 //Function that adds back the class that hides the sidebar
@@ -13,6 +14,20 @@ function hideSidebar(){
   wrapper.classList.remove(indexStyles.wrapperFade);
 }
 
+//Funcation that adds back the class that hides the search bar and drop down results
+function hideSearch(){
+
+  //Inverse logic to functions explained in ../components/navbar/searchoption.js
+  let searchBar = document.getElementById("navSearch");
+  searchBar.classList.add(searchStyles.searchHide);
+
+  let searchIcon = document.getElementById("searchIcon");
+  searchIcon.classList.remove(searchStyles.searchSpace);
+
+  let searchResults = document.getElementById("searchResultCont");
+  searchResults.classList.remove(searchStyles.dropDownVisible);
+}
+
 export default function Home() {
   return (
     <>
@@ -20,7 +35,7 @@ export default function Home() {
       <Head>
         <title>AnimeHouse Testing </title>
       </Head>
-      <div id ="bodyWrapper" onClick={hideSidebar}>
+      <div id ="bodyWrapper" onClick={() =>{hideSidebar();hideSearch()}}>
       <Navbar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post"/>
       </div>
     </>

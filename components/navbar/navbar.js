@@ -2,7 +2,20 @@ import navStyle from "./navbar.module.scss"
 import ListElementSelect from "./listelementselect"
 import SearchOptions from "./searchoptions"
 
+//Function used for testing API calls, will be reused for fetching database queries
+async function getAPITest(){
+  let response = await fetch('/api/db_hook',{
+    method:"GET",
+    headers:{"Content-Type":"application/json"},
+  });
+  let info = await response.json();
+  console.log(info);
+}
+
 export default function Navbar(props){
+
+  //getAPITest();
+
   let testString = props.aPath;
   return (
     <>
@@ -13,7 +26,7 @@ export default function Navbar(props){
         <div className = {navStyle.routingWrapper}>
 
           {/* Title for Navbar */}
-          <h2 className = {navStyle.titleAlign}>Anime House</h2>
+          <h2 className = {navStyle.titleAlign} id = "testing">Anime House</h2>
 
           {/* Unordered list that contains all navigation options */}
           <ul className = {navStyle.listAlign}>
