@@ -1,3 +1,9 @@
 .wrapperFade{
   opacity: 0.15;
+  transition: 0.5s all;
+}
+
+.bodyWrapper{
+  transition: 0.5s all;
+  height:100vh;
 }

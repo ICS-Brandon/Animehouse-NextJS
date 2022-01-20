@@ -12,10 +12,11 @@ $leftMargin: 3rem;
   //Setting position and size forcefully to the right edge of the page
   position: absolute;
   z-index: 10;
-  right: 0rem;
+  right: -0.6rem;
   width: 29rem;
   //Setting height to match the size of the window while allowing for overflow on the Y axis
   height:100vh;
+  padding-right:0rem !important;
   overflow-y:scroll;
   overflow-x: hidden;
   //Setting colors and border
@@ -49,11 +50,15 @@ $leftMargin: 3rem;
 .sidebarList{
   list-style:none;
   padding:0;
+  margin:0;
 }
 
 //Small class to enforce flex display on all Sidebar elements
 .sidebarEle{
-  display: flex;
+  padding: 2rem 0 2rem 0;
+  &:not(:last-child){
+    border-bottom: $separatingBorder;
+  }
 }
 
 /*
@@ -64,7 +69,7 @@ $leftMargin: 3rem;
 .complexSearch{
 
   //Set margins to match rest of items in sidebar
-  margin:2.5rem $leftMargin 0 $leftMargin;
+  margin: 1rem $leftMargin 1rem $leftMargin;
   //Some awful math/work to make the sidebar the same width as the UL
   width: 22.313rem;
   //Making font slightly larger than default
@@ -100,6 +105,16 @@ $leftMargin: 3rem;
 .titleHolder{
   color:white;
   padding-left: $leftMargin;
+  h3{
+    letter-spacing: $navTextSpacing;
+    text-transform: $navTextTransform;
+    font-weight: 600;
+  }
+}
+
+.imageWrapper{
+  max-width: 70%;
+  max-height: 70%;
 }
 
 /*
@@ -139,18 +154,31 @@ $leftMargin: 3rem;
   }
 }
 
+.twitterButton{
+  margin: 0 !important;
+}
+
 /*
   Text Hover
 
   Used to change the color of the text to specified value with transition
+  Also sets default values for the link text for each element
 */
 .textHover{
   cursor:pointer;
   color:$unselectedText;
+  text-transform: $navTextTransform;
+  letter-spacing: $navTextSpacing;
+  font-weight: $navTextWeightNormal;
+  font-size: 0.9rem;
   width: 22.313rem;
   :hover{
     color:$brightText;
     transition: $highlightTransition;
   }
   transition: $highlightTransition;
+}
+
+.discordFix{
+  margin-right: $leftMargin;
 }

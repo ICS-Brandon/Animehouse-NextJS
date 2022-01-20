@@ -1,5 +1,12 @@
 @import "../../styles/global.scss";
 
+
+@mixin screen-max($max) {
+  @media (max-width: $max) {
+    @content
+  }
+};
+
 /*
   Search Wrapper
 
@@ -21,6 +28,7 @@
   //Resize to desire scale and set margin
   font-size: 1.3rem;
   margin: auto 0 auto 0;
+  color: $unselectedText;
   //Defining hover behavior
   &:hover{
     cursor:pointer;
@@ -32,6 +40,7 @@
 
 .searchSpace{
   margin-right: 1rem;
+  color:$brightText;
 }
 
 /*
@@ -53,7 +62,7 @@
     outline: $separatingBorder;
   }
   //Placeholder text color with font styling
-  color: white;
+  color: $brightText;
   font-size: 1.3rem;
   text-indent: 0.2rem;
   transition: all 0.5s ease-out;
@@ -81,6 +90,7 @@
   border-right:$separatingBorder;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  @include screen-max(840px){display:none;}
 }
 
 /*
@@ -93,7 +103,7 @@
   z-index: 10;
   top:4.1rem;
   right: 4.13rem;
-  width:20.4rem;
+  width:20.41rem;
   height:0rem;
   overflow-y: scroll;
   background-color:$bgColorDark;

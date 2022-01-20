@@ -19,13 +19,15 @@ function hideSearch(){
 
   //Inverse logic to functions explained in ../components/navbar/searchoption.js
   let searchBar = document.getElementById("navSearch");
-  searchBar.classList.add(searchStyles.searchHide);
+  if(!searchBar.classList.contains(searchStyles.searchHide)){
+    searchBar.classList.add(searchStyles.searchHide);
 
-  let searchIcon = document.getElementById("searchIcon");
-  searchIcon.classList.remove(searchStyles.searchSpace);
+    let searchIcon = document.getElementById("searchIcon");
+    searchIcon.classList.remove(searchStyles.searchSpace);
 
-  let searchResults = document.getElementById("searchResultCont");
-  searchResults.classList.remove(searchStyles.dropDownVisible);
+    let searchResults = document.getElementById("searchResultCont");
+    searchResults.classList.remove(searchStyles.dropDownVisible);
+  }
 }
 
 export default function Home() {
@@ -35,7 +37,7 @@ export default function Home() {
       <Head>
         <title>AnimeHouse Testing </title>
       </Head>
-      <div id ="bodyWrapper" onClick={() =>{hideSidebar();hideSearch()}}>
+      <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onClick={() =>{hideSidebar();hideSearch()}}>
       <Navbar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post"/>
       </div>
     </>
