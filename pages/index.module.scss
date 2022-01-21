@@ -7,14 +7,15 @@
 //Wrapper class used to set proper sizes and style for main content
 .contentWrapper{
   display: flex;
-  width:75%;
-  margin: 0 auto 0 auto;
+  width:100%;
+  margin:0 auto 0 auto;
+  justify-content: center;
 }
 
 //Wrapper class used to set proper sizes and spacing for posts
 .postWrapper{
-  margin: 0 auto 0 auto;
-  width: 65rem;
+  margin:0;
+  max-width: 65rem;
   &:last-child{
     margin-bottom: 5rem;
   }

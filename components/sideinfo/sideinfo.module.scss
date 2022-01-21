@@ -2,8 +2,189 @@
 @import "../../styles/global.scss";
 
 //Temporary Class for sidebar to show up in the layout
+//TODO needs name update/change
 .tempStuff{
   margin: 4rem 0 5rem 0;
+  min-width: 10rem;
   width: 25rem;
-  border: $separatingBorder;
+  margin-right: 5rem;
+}
+
+/*
+  Side Info Title
+
+  Class used to define global text styling of a title in the side panel
+*/
+.sideInfoTitle{
+  color: $brightText;
+  font-size: 800;
+  text-transform: $navTextTransform;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+}
+
+/*
+  Title Container
+
+  Class used to house all subclasses of the top title element in the side panel
+  Defines bottom padding and border
+*/
+.titleContainer{
+  //Set the size of the title image to fit the container
+  .titleImage{
+    max-width: 60%;
+  }
+  //Remove previous margin styling on title so that it sits closer to image
+  .sideInfoTitle{
+    margin:0;
+  }
+  //Set paragraph styling for the side panel
+  //TODO make this global
+  .titleParagraph{
+    color:$mediumText;
+    text-transform: $navTextTransform;
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-bottom:0;
+  }
+  padding-bottom: 3rem;
+  border-bottom: $separatingBorder;
+}
+
+/*
+  Featured Container
+
+  Class used to house all sublcasses of the featured element in the side panel
+  Defines bottom padding and border
+  //TODO make bottom padding and border a gobal style
+*/
+.featuredContainer{
+
+  //Setting text formatting for title of featured tab
+  //TODO make margin changes global
+  .sideInfoTitle{
+    margin:0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  padding-bottom: 3rem;
+  border-bottom: $separatingBorder;
+}
+
+/*
+  Favorite Container
+
+  Class used to house all sublcasses of the current favorites element in the side panel
+  Defines bottom padding and border
+*/
+.favoriteContainer{
+  .sideInfoTitle{
+    margin:0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  padding-bottom: 3rem;
+  border-bottom: $separatingBorder;
+}
+
+/*
+  Discord Container
+
+  Class used to house all sublcasses of the Discord element in the side panel
+  Defines bottom padding and border
+*/
+.discordContainer{
+  .sideInfoTitle{
+    margin:0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  //TODO make global
+  .discordBlurb{
+    color:$mediumText;
+    text-transform: $navTextTransform;
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-bottom:0;
+  }
+  padding-bottom: 3rem;
+  border-bottom: $separatingBorder;
+}
+
+/*
+  About Container
+
+  Class used to house all sublcasses of the About Me/Us element in the side panel
+  Define bottom padding and border
+*/
+.aboutContainer{
+  .sideInfoTitle{
+    margin:0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  //Sets custom text style for the blurb
+  .aboutMeBlurb{
+    color:$mediumText;
+    line-height: 1.5rem;
+    font-weight: lighter;
+    font-size: 1rem;
+    margin-bottom:0;
+    margin-top:0;
+  }
+  //Button Styling, look into importing from MainPost
+  .learnMoreButton{
+    all: unset;
+    margin-top: 2rem;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    outline: 1px solid $unselectedText;
+    text-transform: $navTextTransform;
+    letter-spacing: 0.05rem;
+    font-size: 0.9rem;
+    color:$unselectedText;
+    border-radius: 0.1rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px;
+    //Define hover behavior
+    &:hover{
+      cursor:pointer;
+      outline: 1px solid $brightText;
+      color:$brightText;
+      box-shadow: 0.2rem 0.2rem black;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  padding-bottom: 3rem;
+  border-bottom: $separatingBorder;
+}
+
+/*
+  Buttons Container (does not house learnMoreButton)
+
+  Class used to house all FontAwesomeIcon buttons in the directory element in the side panel
+  Does not define bottom padding or border
+*/
+.buttonsContainer{
+  //Set to Flex so all elements are on the same row
+  //Shorten width so elements have correct amount of space in-between
+  display: flex;
+  width:50%;
+  margin-top:3rem;
+  justify-content: space-between;
+  //Scale up the icons slightly and set color
+  font-size: 1.5rem;
+  color:$unselectedText;
+  //Define hover behavior
+  .iconContainer{
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      cursor: pointer;
+      color:$brightText;
+      transition: all 0.2s ease-in-out;
+    }
+  }
 }

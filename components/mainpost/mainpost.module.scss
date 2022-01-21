@@ -15,7 +15,7 @@
   font-family:$navTextFamily;
   text-transform: $navTextTransform;
   letter-spacing: 0.1rem;
-  width: auto;
+  max-width: inherit;
   &::webkit-scrollbar{
     display:none;
   }
@@ -47,6 +47,7 @@
   .postTitle{
     color: $brightText;
     font-weight: 800;
+    letter-spacing: 0.3rem;
   }
   //Class used to set styles for the post blurb
   .postBlurb{
@@ -71,7 +72,7 @@
   .postDate{
     color: $mediumText;
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 700;
   }
   //Contains the details of the author, wrapped so that flex can be used
     //Justify flex contents to end of flex box to align with date information
@@ -152,15 +153,15 @@
   width:90%;
   margin: 0 auto 0 auto;
   justify-content: space-between;
-  //Set styling for the button
+  //Set styling for the 1
   .postButton{
     //reset vanilla button styling before applying custom style
     all:unset;
     padding: 1rem 1.3rem 1rem 1.3rem;
     font-size: 0.9rem;
     font-weight: 700;
-    color:$mediumText;
-    outline: 1px solid $mediumText;
+    color:$unselectedText;
+    outline: 1px solid $unselectedText;
     border-radius: 0.1rem;
     transition: all 0.2s ease-in-out;
     box-shadow: 0px 0px;
@@ -188,6 +189,7 @@
     //Class that defines genre link hover behavior and style
     .genreLink{
       text-decoration: underline $separatingBorderDotted;
+      color:$unselectedText;
       transition: all 0.4s ease-in-out;
       text-underline-offset: 0.3rem;
       font-size: 0.8rem;
@@ -206,7 +208,7 @@
     margin: $verticalCenter;
     margin-left: 1rem;
     font-size: 0.8rem;
-    color: $mediumText;
+    color: $unselectedText;
     filter:drop-shadow(0rem 0rem 0rem);
     transition: all 0.2s ease-in-out;
     &:hover{
