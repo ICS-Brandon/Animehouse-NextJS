@@ -1,0 +1,219 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+
+/*
+
+  Post Container
+
+  Parent class to hold all pieces of a post
+*/
+.postContainer{
+  margin-top: 4rem;
+  border: $separatingBorder;
+  background-color: $bgColorDark;
+  font-family:$navTextFamily;
+  text-transform: $navTextTransform;
+  letter-spacing: 0.1rem;
+  width: auto;
+  &::webkit-scrollbar{
+    display:none;
+  }
+}
+
+
+/*
+
+  Post header
+
+  Wrapper class for the header, sets border for separation from image
+*/
+.postHeader{
+  display: flex;
+  border-bottom: $separatingBorder;
+}
+
+/*
+
+  Title Container
+
+  Wrapper class for the title and post blurbs , implements the separating border from meta content
+*/
+.titleCont{
+  padding: 3rem 4rem 3rem 4rem;
+  border-right: $separatingBorder;
+  width: 70%;
+  //Class used to set styles for the post title
+  .postTitle{
+    color: $brightText;
+    font-weight: 800;
+  }
+  //Class used to set styles for the post blurb
+  .postBlurb{
+    color: $mediumText;
+    font-weight:100;
+    font-size: 0.8rem;
+  }
+}
+
+/*
+
+  Meta Content
+
+  Wrapper class for the meta content, sets spacing and sizing for the content
+*/
+.metaCont{
+  padding: 4.4rem 0rem 1rem 0rem;
+  margin-right: 3rem;
+  width: 30%;
+  text-align: right;
+  //Class used to set text styles for the post date
+  .postDate{
+    color: $mediumText;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+  //Contains the details of the author, wrapped so that flex can be used
+    //Justify flex contents to end of flex box to align with date information
+  .authorContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    //Class for styling the link for the author
+    .authorLink{
+      //Set font rules and text decoration
+      font-size: 0.8rem;
+      margin:$verticalCenter;
+      color: $unselectedText;
+      text-decoration: underline $separatingBorderDotted;
+      text-underline-offset: 0.5rem;
+      transition: all 0.2s ease-in-out;
+      //Add hover effect of removing underline
+      &:hover{
+        cursor:pointer;
+        color:$mediumText;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    //Scaling the author image to fit the context and making it round
+    .authorImage{
+      max-width: 20%;
+      max-height: 20%;
+      border-radius: 9999px;
+    }
+  }
+}
+
+/*
+
+  Main Content
+
+  Houses the main content of the post, namely the image and the opening paragraph
+*/
+.mainContent{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 0 auto;
+  //Set padding for container, can't be on image or hover takes effect
+  .imageContainer{
+    margin: 3rem 0 3rem 0;
+    //Scale the image and set hover behavior
+    .postImage{
+      max-width: 100%;
+      margin: auto 0 auto 0;
+      transition: transform 0.5s ease-in-out;
+      &:hover{
+        cursor:pointer;
+        transform: scale(1.005);
+        transition: transform 0.5s ease-in-out;
+      }
+  }
+}
+
+  //Set text styling for the paragraph
+  .postParagraph{
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.1rem;
+    text-align: left;
+    color: $mediumText;
+  }
+}
+
+/*
+  Post Footer
+
+  Houses all styling for the footer elements of the post
+*/
+.postFooter{
+  display: flex;
+  padding: 2rem 0 3rem 0;
+  width:90%;
+  margin: 0 auto 0 auto;
+  justify-content: space-between;
+  //Set styling for the button
+  .postButton{
+    //reset vanilla button styling before applying custom style
+    all:unset;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color:$mediumText;
+    outline: 1px solid $mediumText;
+    border-radius: 0.1rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px;
+    //Define hover behavior
+    &:hover{
+      cursor:pointer;
+      outline: 1px solid $brightText;
+      color:$brightText;
+      box-shadow: 0.2rem 0.2rem black;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  //Set right hand side container to flex as well
+  .postInfo{
+    display:flex;
+    margin: $verticalCenter;
+  }
+
+  //Add wrapper to link to add border to it
+  .genreWrapper{
+    padding-right: 1rem;
+    color: $mediumText;
+    border-right: $separatingBorder;
+    //Class that defines genre link hover behavior and style
+    .genreLink{
+      text-decoration: underline $separatingBorderDotted;
+      transition: all 0.4s ease-in-out;
+      text-underline-offset: 0.3rem;
+      font-size: 0.8rem;
+      padding: 0 0.1rem 0 0.1rem;
+      &:hover{
+        cursor:pointer;
+        color:$brightText;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  //Styling for the like  icon, mostly scaling and setting on hover behavior
+  .likeIcon{
+    margin: $verticalCenter;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: $mediumText;
+    filter:drop-shadow(0rem 0rem 0rem);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      cursor:pointer;
+      color:$brightText;
+      filter:drop-shadow(0.2rem 0.1rem 0.05rem black);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

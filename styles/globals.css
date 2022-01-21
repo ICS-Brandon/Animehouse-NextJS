@@ -9,9 +9,8 @@ body {
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
-section{
-  padding:0rem;
-  margin:0rem;
+body::webkit-scrollbar{
+  display: none;
 }
 
 /* TODO need to get proper scrollbar in place */

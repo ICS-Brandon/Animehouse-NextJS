@@ -57,7 +57,7 @@ export default function Sidebar(props){
                 <NavLink title = "Follow Animehouse" link = {"https://twitter.com/Animehouse_Ca?ref_src=twsrc%5Etfw"} linkTarget = {"_blank"}/>
 
                 <li className = {sidebarStyles.discordFix}>
-                  <iframe class = "discord" src="https://discord.com/widget?id=831001494265921536&theme=dark" width="100%" height="400em" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                  <iframe className = "discord" src="https://discord.com/widget?id=831001494265921536&theme=dark" width="100%" height="400em" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </li>
 
               </ul>

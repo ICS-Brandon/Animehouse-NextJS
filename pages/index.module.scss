@@ -1,9 +1,21 @@
+//CSS class used to create fade in and out on body
 .wrapperFade{
   opacity: 0.15;
   transition: 0.5s all;
 }
 
-.bodyWrapper{
-  transition: 0.5s all;
-  height:100vh;
+//Wrapper class used to set proper sizes and style for main content
+.contentWrapper{
+  display: flex;
+  width:75%;
+  margin: 0 auto 0 auto;
+}
+
+//Wrapper class used to set proper sizes and spacing for posts
+.postWrapper{
+  margin: 0 auto 0 auto;
+  width: 65rem;
+  &:last-child{
+    margin-bottom: 5rem;
+  }
 }

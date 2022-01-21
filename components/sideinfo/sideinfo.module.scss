@@ -1,0 +1,9 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+//Temporary Class for sidebar to show up in the layout
+.tempStuff{
+  margin: 4rem 0 5rem 0;
+  width: 25rem;
+  border: $separatingBorder;
+}

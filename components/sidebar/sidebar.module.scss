@@ -5,12 +5,11 @@ $leftMargin: 3rem;
 
 /*
   Sidebar Container
-
   Used as the content wrapper for the entirety of the Sidebar
 */
 .sidebarContainer{
   //Setting position and size forcefully to the right edge of the page
-  position: absolute;
+  position: fixed;
   z-index: 10;
   right: -0.6rem;
   width: 29rem;
@@ -63,7 +62,6 @@ $leftMargin: 3rem;
 
 /*
   Complex Search
-
   Search bar used for the more detail search available in the sidebar
 */
 .complexSearch{
@@ -96,10 +94,8 @@ $leftMargin: 3rem;
 
 /*
   Title Holder
-
   Used to hold the title for the website in the sidebar
   Currently using default values
-
   TODO needs proper margins and spacing
 */
 .titleHolder{
@@ -119,7 +115,6 @@ $leftMargin: 3rem;
 
 /*
   Directory
-
   Wrapper class used for the unordered list that contains all navigation for the sidebar
 */
 .directory{
@@ -136,7 +131,6 @@ $leftMargin: 3rem;
 
 /*
   Directory Ele (Directory Element)
-
   Styling for each List Element in the unordered list used for navigation via the sidebar
 */
 .directoryEle{
@@ -160,7 +154,6 @@ $leftMargin: 3rem;
 
 /*
   Text Hover
-
   Used to change the color of the text to specified value with transition
   Also sets default values for the link text for each element
 */
