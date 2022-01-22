@@ -1,0 +1,59 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+//CSS variable for on hover effect for pagination
+$separatingBorderHover: solid 1px rgba(160, 160, 160, 1);
+
+/*
+  Pagination Container
+
+  Class used to house all subclasses of the Pagination element
+  Defines style for centering, spacing, font size, and text color
+*/
+.paginationContainer{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color:$mediumText;
+  // Defining styling for all anchor elements, namely spacing, animation, and border radius
+  & > a{
+    border: $separatingBorder;
+    border-radius: 0.2rem;
+    padding:0.5rem 1rem 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  //Fixing border radius for both page selector elements
+  .pageSelector:first-child{
+    border-radius: 0.2rem 0 0 0.2rem;
+  }
+  .pageSelector:last-child{
+    border-radius: 0 0.2rem 0.2rem 0;
+  }
+  //Defining hover behavior for page selector elements
+  .pageSelector:hover{
+    cursor:pointer;
+    color:$brightText;
+    border: $separatingBorderHover;
+    transition: all 0.2s ease-in-out;
+  }
+  //Resetting border radius for all child elements that aren't at the end of the parent
+  .pageNumber:not(:last-child){
+    border-radius: 0;
+  }
+  //Defining hover behavior for page number elements
+  .pageNumber:hover{
+    cursor:pointer;
+    color:$brightText;
+    border: $separatingBorderHover;
+    transition: all 0.2s ease-in-out;
+  }
+  //Defining style for class of disabled page number or selector elements
+  .disabled{
+    border: $separatingBorder;
+    &:hover{
+      cursor:auto;
+      color:$unselectedText;
+      border: $separatingBorder;
+    }
+  }
+}

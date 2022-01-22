@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import Mainpost from '../components/mainpost/mainpost'
+import Pagination from "../components/pagination/pagination"
 import Sideinfo from '../components/sideinfo/sideinfo'
 import sidebarStyles from '../components/sidebar/sidebar.module.scss'
 import searchStyles from '../components/navbar/searchoptions.module.scss'
@@ -57,6 +58,7 @@ export default function Home() {
             <Mainpost></Mainpost>
             <Mainpost></Mainpost>
             <Mainpost></Mainpost>
+            <Pagination></Pagination>
           </div>
         </div>
 
