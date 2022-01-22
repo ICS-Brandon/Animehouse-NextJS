@@ -1,6 +1,7 @@
 import infoStyles from "./sideinfo.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Featuredpost from "./featuredpost"
+import Currentfavorite from "./currentfavorite"
 
 //Class used to build the side info panel
 export default function Sideinfo(){
@@ -41,7 +42,13 @@ export default function Sideinfo(){
           <h2 className = {infoStyles.sideInfoTitle}>Current Favorites</h2>
 
           {/* Unordered List for current favorites, needs favorites styles and HTML defined */}
-          <ul className = {infoStyles.favoritesList}></ul>
+          <ul className = {infoStyles.favoritesList}>
+            <Currentfavorite></Currentfavorite>
+            <Currentfavorite></Currentfavorite>
+            <Currentfavorite></Currentfavorite>
+            <Currentfavorite></Currentfavorite>
+            <Currentfavorite></Currentfavorite>
+          </ul>
 
         </div>
 

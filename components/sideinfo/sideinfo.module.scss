@@ -86,10 +86,13 @@
   .sideInfoTitle{
     margin:0;
     margin-top: 3rem;
-    margin-bottom: 2rem;
   }
   padding-bottom: 3rem;
   border-bottom: $separatingBorder;
+
+  .favoritesList{
+    all:unset;
+  }
 }
 
 /*

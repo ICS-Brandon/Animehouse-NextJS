@@ -1,0 +1,47 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+/*
+  Favorites Container
+
+  Class used to house all subclasses for the current favorites element
+  Defines styling for display type and padding
+*/
+.favoriteContainer{
+  display: flex;
+  padding-top: 3rem;
+  //Sets the size of the image container with a spacing fix
+  .favoriteImageContainer{
+    width:50%;
+    padding-right: 0.5rem;
+    .favoriteImage{
+      max-width:100%;
+    }
+  }
+  /*
+    Favorite Information Container
+
+    Class used to house all subclasses for the information of a favorite series
+    Does not define any styling
+  */
+  .favoriteInformationContainer{
+    //Quick and dirty link container for hover behavior
+    .titleLink{
+      cursor:pointer;
+    }
+    //Defining styling for title text
+    .favoriteTitle{
+      color: $brightText;
+      text-transform: $navTextTransform;
+      letter-spacing: 0.1rem;
+      font-weight: 800;
+    }
+    //Defining styling for studio text
+    .favoriteStudio{
+      color: $mediumText;
+      text-transform: $navTextTransform;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

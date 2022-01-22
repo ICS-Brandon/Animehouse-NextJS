@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Sidebar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post" home = "./"/>
-      
+
       <Head>
         <title>AnimeHouse Testing </title>
       </Head>
@@ -53,6 +53,8 @@ export default function Home() {
         <div className = {indexStyles.contentWrapper}>
           <Sideinfo></Sideinfo>
           <div className = {indexStyles.postWrapper}>
+            <Mainpost></Mainpost>
+            <Mainpost></Mainpost>
             <Mainpost></Mainpost>
             <Mainpost></Mainpost>
           </div>
