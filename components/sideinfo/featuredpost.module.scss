@@ -1,0 +1,72 @@
+//Importing global SCSS variable sheet
+@import "../../styles/global.scss";
+
+/*
+
+  Post Container
+
+  Container class used to house all subclasses of a Featured Post
+  Defines styling for border, spacing and animation
+*/
+.postContainer{
+  border: $separatingBorder;
+  margin-bottom: 2rem;
+  transition: all 0.5s ease-in-out;
+  //Define hover behavior for featured post
+  &:hover{
+    cursor:pointer;
+    transform: scale(1.02);
+    transition: all 0.5s ease-in-out;
+  }
+  //Some weird logic with image container to set background color to match
+  .imageContainer{
+    background-color: $bgColorDark;
+    //Define max size for featured image
+    .featuredImage{
+      max-width:100%;
+    }
+  }
+  /*
+    Content Container
+
+    Class used to house all subclasses of the main content
+    Defines styling for padding and background color;
+  */
+  .contentContainer{
+    background-color:$bgColorDark;
+    padding: 1rem;
+
+    //Wrapper for holding title and author image, set to flex and space between content
+    .mainInformation{
+      display: flex;
+      justify-content: space-between;
+      //Defines styling for the title of the featured post
+      .featuredTitle{
+        color:$brightText;
+        text-transform: $navTextTransform;
+        letter-spacing: 0.1rem;
+        margin: auto 0 auto 0;
+        font-weight: 600;
+        margin:0;
+      }
+      //Container for the author image, slight height fix alongside image styling in child class
+      .authorImageContainer{
+        position: relative;
+        top: -0.1rem;
+        width:15%;
+        .featuredAuthorImage{
+          border-radius: 9999px;
+          max-width:100%;
+        }
+      }
+    }
+    //Defines styling for the date of the featured post
+    .featuredDate{
+      margin-bottom: 1rem;
+      color:$mediumText;
+      text-transform: $navTextTransform;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

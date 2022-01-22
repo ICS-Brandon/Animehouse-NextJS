@@ -1,5 +1,6 @@
 import infoStyles from "./sideinfo.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Featuredpost from "./featuredpost"
 
 //Class used to build the side info panel
 export default function Sideinfo(){
@@ -25,7 +26,11 @@ export default function Sideinfo(){
           <h2 className = {infoStyles.sideInfoTitle}>Featured Reviews</h2>
 
           {/* Unorderd list for featured posts, needs post style and HTML defined */}
-          <ul className = {infoStyles.featuredList}></ul>
+          <ul className = {infoStyles.featuredList}>
+            <Featuredpost></Featuredpost>
+            <Featuredpost></Featuredpost>
+            <Featuredpost></Featuredpost>
+          </ul>
 
         </div>
 
