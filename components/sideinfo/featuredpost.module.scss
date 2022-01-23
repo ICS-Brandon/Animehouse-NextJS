@@ -34,39 +34,52 @@
   */
   .contentContainer{
     background-color:$bgColorDark;
-    padding: 1rem;
+    position: relative;
+    min-height: 6rem;
 
     //Wrapper for holding title and author image, set to flex and space between content
     .mainInformation{
       display: flex;
       justify-content: space-between;
-      //Defines styling for the title of the featured post
-      .featuredTitle{
-        color:$brightText;
-        text-transform: $navTextTransform;
-        letter-spacing: 0.1rem;
-        margin: auto 0 auto 0;
-        font-weight: 600;
-        margin:0;
-      }
-      //Container for the author image, slight height fix alongside image styling in child class
-      .authorImageContainer{
-        position: relative;
-        top: -0.1rem;
-        width:15%;
-        .featuredAuthorImage{
-          border-radius: 9999px;
-          max-width:100%;
-        }
-      }
     }
+
+    //Defines styling for the title of the featured post
+    .textCenter{
+      margin:$verticalCenter;
+      width: 85%;
+      padding-bottom: 1rem;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+    }
+
+    .featuredTitle{
+      color:$brightText;
+      text-transform: $navTextTransform;
+      letter-spacing: 0.1rem;
+      margin:0;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      font-weight: 600;
+    }
+
     //Defines styling for the date of the featured post
     .featuredDate{
-      margin-bottom: 1rem;
       color:$mediumText;
       text-transform: $navTextTransform;
       font-size: 0.8rem;
       letter-spacing: 0.1rem;
+    }
+    //Container for the author image, slight height fix alongside image styling in child class
+    .authorImageContainer{
+      position: absolute;
+      z-index: 10;
+      top: 0.5rem;
+      right:1rem;
+      width:15%;
+      .featuredAuthorImage{
+        border-radius: 9999px;
+        max-width:100%;
+      }
     }
   }
 }

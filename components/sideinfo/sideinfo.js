@@ -4,7 +4,7 @@ import Featuredpost from "./featuredpost"
 import Currentfavorite from "./currentfavorite"
 
 //Class used to build the side info panel
-export default function Sideinfo(){
+export default function Sideinfo({props}){
   return(
     <>
       {/* Top level parent used to house all side panel elements */}
@@ -28,9 +28,10 @@ export default function Sideinfo(){
 
           {/* Unorderd list for featured posts, needs post style and HTML defined */}
           <ul className = {infoStyles.featuredList}>
-            <Featuredpost></Featuredpost>
-            <Featuredpost></Featuredpost>
-            <Featuredpost></Featuredpost>
+            <Featuredpost props = {props[0]}></Featuredpost>
+            <Featuredpost props = {props[1]}></Featuredpost>
+            <Featuredpost props = {props[2]}></Featuredpost>
+            <Featuredpost props = {props[3]}></Featuredpost>
           </ul>
 
         </div>

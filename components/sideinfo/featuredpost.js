@@ -1,17 +1,18 @@
 import featuredStyles from "./featuredpost.module.scss";
 
-export default function Featuredpost(){
+export default function Featuredpost({props}){
+  console.log(props);
   return(
     <>
       {/* Top level anchor wrapper for on click behavior and redirection*/}
-      <a className = {featuredStyles.linkWrapper}>
+      <a className = {featuredStyles.linkWrapper} href = {props.post_link}>
 
         {/* Container for all elements of a featured post */}
         <div className = {featuredStyles.postContainer}>
 
           {/* Container for the main image, currently redundant */}
           <div className = {featuredStyles.imageContainer}>
-            <img className = {featuredStyles.featuredImage} src = "https://lh3.googleusercontent.com/HG1HcyfgYzecnVnXCna-8MbEiFo2EOx-PiNq9U2wqM20knNdF8776NcueQKtVy4Vk91fClvMDcjVjfag6aVr6G7__OoHQ1vsai9RcPKMzuE1f_LqKyhlLH4W8KVlh7_MIJypEnlMnw=w2400">
+            <img className = {featuredStyles.featuredImage} src = {props.post_path}>
             </img>
           </div>
 
@@ -22,17 +23,18 @@ export default function Featuredpost(){
             <div className = {featuredStyles.mainInformation}>
 
               {/* Title for the featured post */}
-              <h4 className = {featuredStyles.featuredTitle}>Godzilla Singular Point Episode 1</h4>
-
-              {/* Image container for the author image, properly scales and fits the image to the page */}
-              <div className = {featuredStyles.authorImageContainer}>
-                <img className = {featuredStyles.featuredAuthorImage} src = "https://lh3.googleusercontent.com/7MpxdyTQ7bCFeC-KlUnAG7crRjK61curPF6wheLj7RfjBMAZInp3QOZnddRo_pAR-16LBN9xFZdzlL_3hvxqXcSrDwNWcuJXLqZEuh8ex8fP2ZmHfSYo-Bcmx3sP_9lY8__MfiTgdA=w2400"></img>
+              <div className = {featuredStyles.textCenter}>
+                <h4 className = {featuredStyles.featuredTitle}>{props.post_title}</h4>
+                {/* Time element to store date of post */}
+                <time className = {featuredStyles.featuredDate}>{props.post_date}</time>
               </div>
 
             </div>
 
-            {/* Time element to store date of post */}
-            <time className = {featuredStyles.featuredDate}>April 24, 2021</time>
+            {/* Image container for the author image, properly scales and fits the image to the page */}
+            <div className = {featuredStyles.authorImageContainer}>
+              <img className = {featuredStyles.featuredAuthorImage} src = {props.post_auth}></img>
+            </div>
 
           </div>
 
