@@ -39,7 +39,7 @@ function hideScrollBar(){
   document.head.appendChild(style);
 }
 
-export default function Home() {
+export default function Home({posts}) {
   return (
     <>
       <Sidebar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post" home = "./"/>
@@ -54,10 +54,10 @@ export default function Home() {
         <div className = {indexStyles.contentWrapper}>
           <Sideinfo></Sideinfo>
           <div className = {indexStyles.postWrapper}>
-            <Mainpost></Mainpost>
-            <Mainpost></Mainpost>
-            <Mainpost></Mainpost>
-            <Mainpost></Mainpost>
+            <Mainpost postInfo = {posts[0]}></Mainpost>
+            <Mainpost postInfo = {posts[1]}></Mainpost>
+            <Mainpost postInfo = {posts[2]}></Mainpost>
+            <Mainpost postInfo = {posts[3]}></Mainpost>
             <Pagination></Pagination>
           </div>
         </div>
@@ -65,4 +65,19 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const res = await fetch('http://localhost:8081/test')
+  const posts = await res.json()
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      posts,
+    },
+  }
 }

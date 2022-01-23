@@ -89,6 +89,7 @@
       text-decoration: underline $separatingBorderDotted;
       text-underline-offset: 0.5rem;
       transition: all 0.2s ease-in-out;
+      margin-right: 0.5rem;
       //Add hover effect of removing underline
       &:hover{
         cursor:pointer;
