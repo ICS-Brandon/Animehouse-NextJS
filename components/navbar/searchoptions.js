@@ -11,6 +11,7 @@ function showSidebar(){
 
   //Get required elements and remove/add desired classes
   let sidebar = document.getElementById("sidebarCont");
+  let sidebarSearch = document.getElementById("sidebarSearch");
   let wrapper = document.getElementById("bodyWrapper");
 
   if(sidebar.classList.contains(sidebarStyles.sidebarHide)){

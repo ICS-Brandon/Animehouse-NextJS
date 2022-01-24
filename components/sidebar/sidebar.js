@@ -13,8 +13,6 @@ async function escapeSidebar(e){
   }
 }
 
-let timeout = null;
-
 //Function that adds back the class that hides the sidebar
 function hideSidebar(){
   let sidebar = document.getElementById("sidebarCont");
