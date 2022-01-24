@@ -12,6 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "fortawesome": "0.0.1-security",
     "fortawesome-light": "^1.0.3",
@@ -20,7 +21,8 @@
     "pg-promise": "^10.11.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "use-debounce": "^7.0.1"
   },
   "devDependencies": {
     "eslint": "8.6.0",

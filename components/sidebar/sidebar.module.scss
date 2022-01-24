@@ -22,6 +22,10 @@ $leftMargin: 3rem;
   background-color: $bgColorDark;
   border-left:$separatingBorder;
 
+  &:focus{
+    outline-width:0;
+  }
+
   //Scrollbar class for custom scrollbar in Sidebar
   &::-webkit-scrollbar{
     width:10px;
@@ -58,6 +62,11 @@ $leftMargin: 3rem;
   &:not(:last-child){
     border-bottom: $separatingBorder;
   }
+  .sidebarResults{
+    padding: 0 3rem 0 3rem;
+    max-height: 65rem;
+    overflow-y: scroll;
+  }
 }
 
 /*
@@ -67,9 +76,9 @@ $leftMargin: 3rem;
 .complexSearch{
 
   //Set margins to match rest of items in sidebar
-  margin: 1rem $leftMargin 1rem $leftMargin;
+  margin: 1rem $leftMargin 0rem $leftMargin;
   //Some awful math/work to make the sidebar the same width as the UL
-  width: 22.313rem;
+  width: 22.9375rem;
   //Making font slightly larger than default
   font-size: 1.2rem;
   // Set padding so input is larger on all sides than text within
@@ -102,7 +111,7 @@ $leftMargin: 3rem;
   color:white;
   padding-left: $leftMargin;
   h3{
-    letter-spacing: $navTextSpacing;
+    letter-spacing: 0.4rem;
     text-transform: $navTextTransform;
     font-weight: 600;
   }

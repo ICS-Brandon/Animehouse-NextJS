@@ -4,7 +4,7 @@ import Featuredpost from "./featuredpost"
 import Currentfavorite from "./currentfavorite"
 
 //Class used to build the side info panel
-export default function Sideinfo({props}){
+export default function Sideinfo({featuredPosts,currentFavorites}){
   return(
     <>
       {/* Top level parent used to house all side panel elements */}
@@ -28,10 +28,10 @@ export default function Sideinfo({props}){
 
           {/* Unorderd list for featured posts, needs post style and HTML defined */}
           <ul className = {infoStyles.featuredList}>
-            <Featuredpost props = {props[0]}></Featuredpost>
-            <Featuredpost props = {props[1]}></Featuredpost>
-            <Featuredpost props = {props[2]}></Featuredpost>
-            <Featuredpost props = {props[3]}></Featuredpost>
+            <Featuredpost props = {featuredPosts[0]}></Featuredpost>
+            <Featuredpost props = {featuredPosts[1]}></Featuredpost>
+            <Featuredpost props = {featuredPosts[2]}></Featuredpost>
+            <Featuredpost props = {featuredPosts[3]}></Featuredpost>
           </ul>
 
         </div>
@@ -44,11 +44,11 @@ export default function Sideinfo({props}){
 
           {/* Unordered List for current favorites, needs favorites styles and HTML defined */}
           <ul className = {infoStyles.favoritesList}>
-            <Currentfavorite></Currentfavorite>
-            <Currentfavorite></Currentfavorite>
-            <Currentfavorite></Currentfavorite>
-            <Currentfavorite></Currentfavorite>
-            <Currentfavorite></Currentfavorite>
+            <Currentfavorite props = {currentFavorites[0]}></Currentfavorite>
+            <Currentfavorite props = {currentFavorites[1]}></Currentfavorite>
+            <Currentfavorite props = {currentFavorites[2]}></Currentfavorite>
+            <Currentfavorite props = {currentFavorites[3]}></Currentfavorite>
+            <Currentfavorite props = {currentFavorites[4]}></Currentfavorite>
           </ul>
 
         </div>

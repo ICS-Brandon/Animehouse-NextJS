@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import Mainpost from '../components/mainpost/mainpost'
@@ -33,13 +34,7 @@ function hideSearch(){
   }
 }
 
-function hideScrollBar(){
-  let style = document.createElement("style");
-  style.innerHTML = 'body::-webkitscrollbar{display:none;}';
-  document.head.appendChild(style);
-}
-
-export default function Home(props) {
+export default function Home({posts,featuredPosts,currentFavorites}) {
   return (
     <>
       <Sidebar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post" home = "./"/>
@@ -48,40 +43,48 @@ export default function Home(props) {
         <title>AnimeHouse Testing </title>
       </Head>
 
-      <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onLoad= {hideScrollBar} onClick={() =>{hideSidebar();hideSearch()}}>
+      <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onClick={() =>{hideSidebar();hideSearch()}}>
         <Navbar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post"/>
 
         <div className = {indexStyles.contentWrapper}>
-          <Sideinfo props = {props.featuredPosts}></Sideinfo>
+          <Sideinfo featuredPosts = {featuredPosts} currentFavorites = {currentFavorites}></Sideinfo>
           <div className = {indexStyles.postWrapper}>
-            <Mainpost postInfo = {props.posts[0]}></Mainpost>
-            <Mainpost postInfo = {props.posts[1]}></Mainpost>
-            <Mainpost postInfo = {props.posts[2]}></Mainpost>
-            <Mainpost postInfo = {props.posts[3]}></Mainpost>
+            <Mainpost postInfo = {posts[0]}></Mainpost>
+            <Mainpost postInfo = {posts[1]}></Mainpost>
+            <Mainpost postInfo = {posts[2]}></Mainpost>
+            <Mainpost postInfo = {posts[3]}></Mainpost>
             <Pagination></Pagination>
           </div>
         </div>
 
       </div>
+      {/*<Script type="text/javascript" src = "/javascript/simplesearch.js" onLoad = {() =>{initSearch()}}></Script>*/}
+      {/*<Script type="text/javascript" src = "/javascript/largeSearch.js" onLoad = {() =>{initLargeSearch()}}></Script>*/}
     </>
   )
 }
 
+/*
+  Loads all possible information into props on site generation
+
+  Fetches information for: main posts, featured posts, and current favorites
+  Fetches for search results handled by exterior Javascript
+*/
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  // You can use any data fetching library
   const postsRes = await fetch('http://localhost:8081/main-posts')
   const posts = await postsRes.json()
 
   const featuredRes = await fetch('http://localhost:8081/featured-posts-home')
   const featuredPosts = await featuredRes.json();
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+  const favoritesRes = await fetch('http://localhost:8081/current-favorites')
+  const currentFavorites = await favoritesRes.json();
   return {
     props: {
       posts,
       featuredPosts,
+      currentFavorites,
     },
   }
 }
