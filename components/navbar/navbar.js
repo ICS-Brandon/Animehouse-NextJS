@@ -2,21 +2,14 @@ import navStyle from "./navbar.module.scss"
 import ListElementSelect from "./listelementselect"
 import SearchOptions from "./searchoptions"
 
-//Function used for testing API calls, will be reused for fetching database queries
-async function getAPITest(){
-  let response = await fetch('/api/db_hook',{
-    method:"GET",
-    headers:{"Content-Type":"application/json"},
-  });
-  let info = await response.json();
-  console.log(info);
-}
+export default function Navbar({props}){
 
-export default function Navbar(props){
+  console.log(props);
 
-  //getAPITest();
+  if(!props.title){
+    props.title = "AnimeHouse";
+  }
 
-  let testString = props.aPath;
   return (
     <>
       {/* Top level wrapper for Navigation bar */}
@@ -26,21 +19,21 @@ export default function Navbar(props){
         <div className = {navStyle.routingWrapper}>
 
           {/* Title for Navbar */}
-          <h2 className = {navStyle.titleAlign} id = "testing">Anime House</h2>
+          <h2 className = {navStyle.titleAlign} id = "testing">{props.title}</h2>
 
           {/* Unordered list that contains all navigation options */}
           <ul className = {navStyle.listAlign}>
 
             {/* A component containing a Link that wraps a header containg the target directory */}
-            <ListElementSelect title="Home" linkTarget = {testString}/>
+            <ListElementSelect title="Home" linkTarget = {props.homePath}/>
 
-            <ListElementSelect title="Anime" linkTarget = {testString}/>
+            <ListElementSelect title="Anime" linkTarget = {props.animePath}/>
 
-            <ListElementSelect title="Manga" linkTarget = {testString}/>
+            <ListElementSelect title="Manga" linkTarget = {props.mangaPath}/>
 
-            <ListElementSelect title="Light Novel" linkTarget = {testString}/>
+            <ListElementSelect title="Light Novel" linkTarget = {props.lightnovelPath}/>
 
-            <ListElementSelect title="Help" linkTarget = {testString}/>
+            <ListElementSelect title="Help" linkTarget = {props.helpPath}/>
 
           </ul>
 

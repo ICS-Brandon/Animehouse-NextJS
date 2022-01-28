@@ -10,7 +10,7 @@ $leftMargin: 3rem;
 .sidebarContainer{
   //Setting position and size forcefully to the right edge of the page
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   right: -0.6rem;
   width: 29rem;
   //Setting height to match the size of the window while allowing for overflow on the Y axis
@@ -21,7 +21,8 @@ $leftMargin: 3rem;
   //Setting colors and border
   background-color: $bgColorDark;
   border-left:$separatingBorder;
-
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &:focus{
     outline-width:0;
   }
@@ -38,14 +39,19 @@ $leftMargin: 3rem;
   }
   //Transformatin and transition to mirror animation
   transform: translateX(0rem);
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 //Class used to show and animate the sidebar appearing
 .sidebarHide{
-  right:-29rem;
 
   transform: translateX(29rem);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -66,6 +72,8 @@ $leftMargin: 3rem;
     padding: 0 3rem 0 3rem;
     max-height: 65rem;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

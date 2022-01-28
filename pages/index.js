@@ -35,6 +35,13 @@ function hideSearch(){
 }
 
 export default function Home({posts,featuredPosts,currentFavorites}) {
+  let props = {
+    "homePath" : "/",
+    "animePath" : "/view/Anime",
+    "mangaPath" : "/posts/first_post",
+    "lightnovelPath" : "/posts/first_post",
+    "helpPath" : "/posts/69420"
+  };
   return (
     <>
       <Sidebar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post" home = "./"/>
@@ -44,8 +51,7 @@ export default function Home({posts,featuredPosts,currentFavorites}) {
       </Head>
 
       <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onClick={() =>{hideSidebar();hideSearch()}}>
-        <Navbar aPath="/posts/first_post" mPath="/posts/first_post" lnPath="/posts/first_post" hpath="/posts/first_post"/>
-
+        <Navbar props = {props} />
         <div className = {indexStyles.contentWrapper}>
           <Sideinfo featuredPosts = {featuredPosts} currentFavorites = {currentFavorites}></Sideinfo>
           <div className = {indexStyles.postWrapper}>
@@ -58,8 +64,6 @@ export default function Home({posts,featuredPosts,currentFavorites}) {
         </div>
 
       </div>
-      {/*<Script type="text/javascript" src = "/javascript/simplesearch.js" onLoad = {() =>{initSearch()}}></Script>*/}
-      {/*<Script type="text/javascript" src = "/javascript/largeSearch.js" onLoad = {() =>{initLargeSearch()}}></Script>*/}
     </>
   )
 }

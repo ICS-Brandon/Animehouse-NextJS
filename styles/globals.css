@@ -7,6 +7,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x:hidden;
   font-family: "Raleway", Helvetica, sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body::webkit-scrollbar{

@@ -1,0 +1,87 @@
+@import "../../styles/global.scss";
+
+.gridContainer{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: 5rem auto 5rem auto;
+}
+
+/*
+  Parent Container
+
+  Class used to house all sublcasses of the Large Result component
+  Defines styling for border, animation, and spacing
+*/
+.parentContainer{
+  border: $separatingBorder;
+  transition: all 0.2s ease-in-out;
+  &:hover{
+    cursor:pointer;
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+//Image container for title image, fits to size and implements a background-color fix
+.imageContainer{
+  width:inherit;
+  background-color: $bgColorDark;
+  .mainImage{
+    max-width: 100%;
+  }
+}
+
+/*
+  Post Information Wrapper
+
+  Wrapper class used to house all subclasses of post information
+  Defines background color, default text behavior, and padding
+*/
+.postInfoWrapper{
+  font-family: $navTextFamily;
+  background-color: $bgColorDark;
+  min-height: 5rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+  .spacingWrapper{
+    margin: auto 0 auto 0;
+    //Set styling for search result title
+    .resultTitle{
+      margin:0;
+      color:$brightText;
+      text-transform: $navTextTransform;
+      margin-bottom: 0.3rem;
+      width:80%;
+    }
+    //Set styling for search result date
+    .resultDate{
+      color:$mediumText;
+      text-transform: $navTextTransform;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/*
+  Position Wrapper
+
+  Wrapper class used to house all subclasses for the author image
+  Sets position type to allow for absolute placement within children classes
+*/
+.positionWrapper{
+  position: relative;
+  //Container class for author image that implements absolute positioning and sets width
+  .authorImageContainer{
+    position: absolute;
+    bottom: 01rem;
+    right:0.5rem;
+    width: 10%;
+    border-radius: 9999px;
+    .authorImage{
+      max-width: 75%;
+    }
+  }
+}
