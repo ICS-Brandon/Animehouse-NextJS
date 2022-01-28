@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import React, { useCallback, useRef, useState, useEffect } from 'react'
 import Navbar from '../../../components/navbar/navbar'
 import Sidebar from '../../../components/sidebar/sidebar'
 import AnimeCard from "../../../components/view/animecard"
@@ -33,7 +34,13 @@ function hideSearch(){
   }
 }
 
-const View = () => {
+const View = ({cardResults}) => {
+
+  //Build cards for the results
+  const cards = cardResults.map(card => {
+    return <AnimeCard key = {card.pid} props = {card}/>
+  })
+
   const router = useRouter();
   const { type } = router.query;
 
@@ -59,24 +66,7 @@ const View = () => {
         <div className = {indexStyles.contentWrapper}>
           <div className = {indexStyles.contentWrapper}>
             <div className = {viewStyles.gridContainer}>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
-              <AnimeCard></AnimeCard>
+              {cards}
             </div>
           </div>
         </div>
@@ -85,5 +75,16 @@ const View = () => {
     </>
   )
 }
+
+export async function getServerSideProps() {
+  const cardRes = await fetch('http://localhost:8081/get-card-results')
+  const cardResults = await cardRes.json();
+  return{
+    props:{
+      cardResults,
+    },
+  }
+}
+
 
 export default View;

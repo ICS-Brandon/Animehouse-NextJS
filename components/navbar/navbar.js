@@ -4,8 +4,6 @@ import SearchOptions from "./searchoptions"
 
 export default function Navbar({props}){
 
-  console.log(props);
-
   if(!props.title){
     props.title = "AnimeHouse";
   }

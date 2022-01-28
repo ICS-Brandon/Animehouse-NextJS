@@ -76,7 +76,7 @@ export default function Home({posts,featuredPosts,currentFavorites}) {
 */
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const postsRes = await fetch('http://localhost:8081/main-posts')
+  const postsRes = await fetch('http://localhost:8081/get-main-posts')
   const posts = await postsRes.json()
 
   const featuredRes = await fetch('http://localhost:8081/featured-posts-home')
