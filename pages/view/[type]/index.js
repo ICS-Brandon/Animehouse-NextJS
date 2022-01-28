@@ -76,8 +76,9 @@ const View = ({cardResults}) => {
   )
 }
 
-export async function getServerSideProps() {
-  const cardRes = await fetch('http://localhost:8081/get-card-results')
+export async function getServerSideProps(context) {
+  let fetchQuery = 'http://localhost:8081/get-'+context.query.type.toLowerCase()+'-results';
+  const cardRes = await fetch(fetchQuery)
   const cardResults = await cardRes.json();
   return{
     props:{
