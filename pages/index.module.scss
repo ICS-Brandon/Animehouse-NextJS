@@ -6,10 +6,14 @@
 
 //Wrapper class used to set proper sizes and style for main content
 .contentWrapper{
-  display: flex;
-  width:100%;
+  display:flex;
+  width:80%;
   margin:0 auto 0 auto;
   justify-content: center;
+}
+
+.gridFix{
+  display: block;
 }
 
 //Wrapper class used to set proper sizes and spacing for posts

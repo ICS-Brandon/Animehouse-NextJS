@@ -6,8 +6,8 @@
   grid-auto-rows: auto;
   grid-gap: 3rem;
   padding-bottom: 1rem;
-  width: 80%;
-  margin: 5rem auto 5rem auto;
+  width: 100%;
+  margin: 2rem auto 5rem auto;
 }
 
 /*
@@ -44,8 +44,8 @@
 .postInfoWrapper{
   font-family: $navTextFamily;
   background-color: $bgColorDark;
-  min-height: 5rem;
   padding: 1rem 0.5rem 1rem 1rem;
+  height: 5rem;
   .spacingWrapper{
     margin: auto 0 auto 0;
     //Set styling for search result title

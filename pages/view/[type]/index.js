@@ -4,10 +4,12 @@ import React, { useCallback, useRef, useState, useEffect } from 'react'
 import Navbar from '../../../components/navbar/navbar'
 import Sidebar from '../../../components/sidebar/sidebar'
 import AnimeCard from "../../../components/view/animecard"
+import SearchNav from "../../../components/searchnav/searchnav"
 import indexStyles from '../../index.module.scss'
 import sidebarStyles from '../../../components/sidebar/sidebar.module.scss'
 import searchStyles from '../../../components/navbar/searchoptions.module.scss'
 import viewStyles from '../../../components/view/view.module.scss'
+import searchNavStyles from "../../../components/searchnav/searchnav.module.scss"
 
 //Function that adds back the class that hides the sidebar
 function hideSidebar(){
@@ -18,7 +20,7 @@ function hideSidebar(){
   wrapper.classList.remove(indexStyles.wrapperFade);
 }
 
-//Funcation that adds back the class that hides the search bar and drop down results
+//Function that adds back the class that hides the search bar and drop down results
 function hideSearch(){
 
   //Inverse logic to functions explained in ../components/navbar/searchoption.js
@@ -32,6 +34,17 @@ function hideSearch(){
     let searchResults = document.getElementById("searchResultCont");
     searchResults.classList.remove(searchStyles.dropDownVisible);
   }
+}
+
+//Function used to reset the arrows for the two filter options
+//More code will be added once drop down menus are implemented
+function hideFilters(){
+  let genre = document.getElementById("genreFilter");
+  let arrow = genre.children[1].children[0];
+  arrow.classList.remove(searchNavStyles.rotation);
+  let type = document.getElementById("typeFilter");
+  arrow = type.children[1].children[0];
+  arrow.classList.remove(searchNavStyles.rotation);
 }
 
 const View = ({cardResults}) => {
@@ -61,10 +74,11 @@ const View = ({cardResults}) => {
         <title>AnimeHouse Testing</title>
       </Head>
 
-      <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onClick={() =>{hideSidebar();hideSearch()}}>
+      <div id ="bodyWrapper" className = {indexStyles.bodyWrapper} onClick={() =>{hideSidebar();hideSearch();hideFilters();}}>
         <Navbar props = {props}/>
         <div className = {indexStyles.contentWrapper}>
-          <div className = {indexStyles.contentWrapper}>
+          <div className = {indexStyles.contentWrapper + ' ' + indexStyles.gridFix}>
+            <SearchNav/>
             <div className = {viewStyles.gridContainer}>
               {cards}
             </div>
